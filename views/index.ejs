@@ -63,8 +63,10 @@
 
 					<!-- Section About -->
 					<section id="about" class="main-section">
-						<h1><%- about[0].name %></h1>
-						<p><%- about[0].body %></p>
+						<% for(var i=0;i<about.length;i++){ %>
+							<h1><%- about[i].name %></h1>
+							<p><%- about[i].body %></p>
+						<% } %>
 					</section>
 
 					<!-- Section Team -->
@@ -89,10 +91,12 @@
 					</section>
 					<!-- Section Contacts -->
 					<section id="contact" class="main-section">
-						<h1><%- contact[0].name %></h1>
+						<% for(var i=0;i<contact.length;i++){ %>
+							<h1><%- contact[i].name %></h1>
 
-						<!-- Contact details -->
-						<p><%- contact[0].body %></p>
+							<!-- Contact details -->
+							<p><%- contact[i].body %></p>
+						<% } %>
 						</div>
 
 					</section>

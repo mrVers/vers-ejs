@@ -4,17 +4,17 @@
 	<hr/>
 
 	<div ng-form name="myForm">
-		<label>Name*</label>
+		<label>Title*</label>
 	    <input ng-model="store.name" name="title" type="text" class="form-control" ng-minlength="3" ng-class="{'required': submitted && !myForm.title.$valid}" required/>
 	    <br/>
-	    <label>About</label>
+		<label>Slug</label>
+		<select ng-model="store.status" name="status" ng-options="status.name as status.name for status in statuses" 	class="form-control"></select>
+		<br/>
+	    <label>Body</label>
 	    <textarea ng-model="store.body" name="body" class="form-control"></textarea>
 	    <br/>
 	    <label>Email</label>
-	    <input ng-model="store.email" name="url" type="email" class="form-control" />
-	    <br/>
-		<label>Location</label>
-	    <input ng-model="store.location" name="location" type="text" class="form-control"></input>
+	    <input ng-model="store.email" name="email" type="email" class="form-control" />
 	    <br/>
 		<div class="btn btn-vintage pull-right" ng-click="onSave()" ng-disabled="isSaving">+ update</div>
 	</div>

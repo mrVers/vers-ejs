@@ -51,7 +51,7 @@ angular.module('app').controller('NewItemCtrl', function ($scope, itemService, s
 
 
 					//$scope.isSaving = false;
-					$state.go('edit-item', {'id': res.data._id});
+					$state.go('items');
 
 				});
 			

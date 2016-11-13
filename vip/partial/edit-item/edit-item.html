@@ -5,7 +5,7 @@
 
 </div>
 
-<div class="col-md-6">
+<div class="col-md-9">
 	
 	<div ng-form name="myForm">
 		<label>Title*</label>
@@ -14,26 +14,14 @@
 	    <label>Description*</label>
 	    <textarea ng-model="item.body" name="body" class="form-control" ng-class="{'required': submitted && myForm.body.$error.required}" required></textarea>
 	    <br/>
-		<label>Price*</label>
-	    <input ng-model="item.price" name="price" class="form-control" type="number" step="0.01" ng-class="{'required': submitted && myForm.body.$error.required}" required></input>
+		<label>Url</label>
+	    <input ng-model="item.url" name="url" type="url" class="form-control" />
 	    <br/>
-		<label>Store</label>
-		<select ng-model="item.store" name="store" ng-options="store._id as store.name for store in stores" class="form-control"></select>
-		<br/>
-		<div class="btn btn-vintage pull-right" ng-click="onSave()" ng-disabled="isSaving">+ update</div>
+		<div class="btn btn-vintage pull-right" ng-click="onSave()" ng-disabled="isSaving">+ save</div>
 	</div>
 	<span><strong>{{requiredFields}}</strong></span>
+	<br/>
 	
-</div>
-
-
-<div class="col-md-3">
-	<label>QR code</label>
-	<img class="cover" ng-if="item.qr" ng-src="{{url}}/qr/{{item.qr}}"></img>
-	<br/>
-	<br/>
-	<label>ShortURL</label> • <a href="/{{item.shorturl}}" target="_blank">go</a>
-	<input value="{{url}}/{{item.shorturl}}" name="shorturl" type="text" class="form-control" readonly/>
 </div>
 
 <div class="col-md-3">

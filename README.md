@@ -1,4 +1,4 @@
-# utr.ip
+# Vers EJS
 
 A simple Node.js CMS w/ Angular and .ejs for the frontend.
 

@@ -4,6 +4,20 @@ angular.module('app').controller('EditStoreCtrl',function($scope, storeService, 
 	$scope.isSaving = false;
 	$scope.submitted = false;
 	$scope.requiredFields = "";
+	
+		$scope.statuses = [
+		{
+			name: 'Front'
+		}
+		
+		, {
+			name: 'About'
+		}
+		
+		, {
+			name: 'Contact'
+		}
+	];
 
 
 	$scope.onSave = function () {
