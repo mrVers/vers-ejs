@@ -1,0 +1,125 @@
+<!DOCTYPE>
+<html lang="sl_SI">
+<% include header.ejs %>
+
+	<body>
+
+		<!-- LEFT SIDE -->
+		<div class="left-wrap push">
+
+			<div class="inner">
+				<a href="#content" class="slide-link"><i class="icon ion-chevron-down"></i></a>
+				<!-- Header -->
+				<header class="site-header">
+					<h1 class="site-title"><img src="assets/images/logo_white.png" width="400" height="50" alt="Agencija Vers" /></h1>
+				</header>
+				
+				<!-- Intro -->
+				<div class="intro">
+					<div class="intro-title"><%- front[0].name %></div>
+				</div>
+
+				<!-- Countdown -->
+				<div class="countdown">
+					<div class="countdown-title"><%- front[0].body %></div>
+				</div>
+
+				<nav class="site-nav ">
+					<ul id="menu-left">
+						<li><a href="#about" title="About">o nas.</a></li>
+						<li><a href="#projects" title="Team">projekti.</a></li>
+						<li><a href="#contact" title="Contacts">kontakt.</a></li>
+					</ul>
+				</nav>
+
+				<div class="contact">
+					<p class="mail">
+						<a href="mailto:hello@vers.si"><span>hello@vers.si</span></a>
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- END LEFT SIDE -->
+
+		<!-- RIGHT SIDE -->
+		<div id="content" class="right-wrap panel">
+
+			<div class="inner">
+				<a href="#content" class="menu-link"><i class="icon ion-ios7-close-empty"></i></a>
+				<!-- Navigation -->
+				<nav class="site-nav">
+					<h3 class="visually-hidden">Menu</h3>
+					<ul id="menu">
+						<li><a href="#about" title="About">O nas</a></li>
+						<li><a href="#projects" title="Team">Projekti</a></li>
+						<li><a href="#contact" title="Contacts">Kontakt</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main content -->
+				<div id="main">
+
+					<!-- Section About -->
+					<section id="about" class="main-section">
+						<h1><%- about[0].name %></h1>
+						<p><%- about[0].body %></p>
+					</section>
+
+					<!-- Section Team -->
+					<section id="projects" class="main-section">
+						<h1>projekti.</h1>
+						<p>Naš kreativni splet.</p>
+
+						<!-- Portfolio list -->
+
+						<% for(var i=0;i<items.length;i++){ %>
+							<div class="row team-member">
+								<div class="one-half team-photo">
+									<a href="<%- items[i].url %>"><img src="/uploads/<%- items[i].coverImage %>" alt="<%- items[i].title %>" /></a>
+								</div>
+								<div class="one-half team-desc">
+									<h2><%- items[i].title %></h2>
+									<p><%- items[i].body %>
+										<br><a href="<%- items[i].url %>"><%- items[i].url %></a></p>
+								</div>
+							</div>
+						<% } %>
+					</section>
+					<!-- Section Contacts -->
+					<section id="contact" class="main-section">
+						<h1><%- contact[0].name %></h1>
+
+						<!-- Contact details -->
+						<p><%- contact[0].body %></p>
+						</div>
+
+					</section>
+
+				</div>
+
+				<!-- Footer -->
+				<footer class="site-footer">
+
+					<!-- Social links -->
+					<div class="footer-social">
+						<p>trenutki navdiha. © 2016</p>
+					</div>
+
+				</footer>
+
+			</div>
+
+		</div>
+
+		<!-- END RIGHT SIDE -->
+		<div class="easter">
+			<a href="http://utrip.vers.si/"><img src="assets/images/easter.png" alt="Click me."></a>
+		</div>
+
+	</body>
+	
+	<% include footer.ejs %>
+
+</html>

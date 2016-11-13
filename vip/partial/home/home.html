@@ -1,0 +1,19 @@
+<div class="col-md-12">
+	<h1>Home</h1>
+	<div>dashboard</div>
+	<hr/>
+	<br/>
+	<br/>
+</div>
+
+<div class="col-md-4 col-md-offset-2">
+	<h4>Latest items</h4>
+	<hr/>
+
+	<div ng-repeat="item in items | orderBy:'-' | limitTo: 5">
+		<div class="new-button home" ui-sref="edit-item({id:item._id})">{{item.title}}</div>
+	</div>
+	<br/>
+	<strong>All items: {{items.length}}</strong>
+	<br/>
+</div>
