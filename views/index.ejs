@@ -13,16 +13,18 @@
 				<header class="site-header">
 					<h1 class="site-title"><img src="assets/images/logo_white.png" width="400" height="50" alt="Agencija Vers" /></h1>
 				</header>
-				
+
 				<!-- Intro -->
+				<% for(var i=0;i<front.length;i++){ %>
 				<div class="intro">
-					<div class="intro-title"><%- front[0].name %></div>
+					<div class="intro-title"><%- front[i].name %></div>
 				</div>
 
 				<!-- Countdown -->
 				<div class="countdown">
-					<div class="countdown-title"><%- front[0].body %></div>
+					<div class="countdown-title"><%- front[i].body %></div>
 				</div>
+				<% } %>
 
 				<nav class="site-nav ">
 					<ul id="menu-left">
@@ -123,7 +125,7 @@
 		</div>
 
 	</body>
-	
+
 	<% include footer.ejs %>
 
 </html>
